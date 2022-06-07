@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Tests\\AppBundle\\Entity\\DinosaurTest::testThatWorks":3},"times":{"Tests\\AppBundle\\Entity\\DinosaurTest::testThatWorks":0.005}}
+{"version":1,"defects":{"Tests\\AppBundle\\Entity\\DinosaurTest::testThatWorks":3,"Tests\\AppBundle\\Entity\\DinosaurTest::testSettingsLength":4},"times":{"Tests\\AppBundle\\Entity\\DinosaurTest::testThatWorks":0.005,"Tests\\AppBundle\\Entity\\DinosaurTest::testSettingsLength":0.005}}
