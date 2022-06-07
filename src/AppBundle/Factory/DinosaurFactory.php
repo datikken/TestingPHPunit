@@ -20,10 +20,18 @@ class DinosaurFactory
         $length = random_int(1, Dinosaur::LARGE - 1);
         $isCarnivorous = false;
 
-        if(strpos($spec, 'large') !== false) {
-            $length = random_int(Dinosaur::LARGE, 100);
+        if(strpos($spec, 'huge') !== false) {
+            $length = random_int(Dinosaur::HUGE, 100);
         }
-
+        if(strpos($spec, 'OMG') !== false) {
+            $length = random_int(Dinosaur::HUGE, 100);
+        }
+        if(strpos($spec, "😱") !== false) {
+            $length = random_int(Dinosaur::HUGE, 100);
+        }
+        if(strpos($spec, 'large') !== false) {
+            $length = random_int(Dinosaur::LARGE, Dinosaur::HUGE-1);
+        }
         if(strpos($spec, 'carnivorous') !== false) {
             $isCarnivorous = true;
         }
