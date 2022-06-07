@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use AppBundle\Exception\NotABuffetException;
 
 class Enclosure
 {
@@ -25,6 +26,15 @@ class Enclosure
 
     public function addDinosaur(Dinosaur $dino)
     {
+        if (!$this->canAddDinosaur($dino)) {
+            throw new NotABuffetException();
+        }
+
         $this->dinosaurs[] = $dino;
+    }
+
+    public function canAddDinosaur(Dinosaur $dinosaur): bool
+    {
+        return count($this->dinosaurs) == 0 || $this->dinosaurs->first()->isCarnivorous() === $dinosaur->isCarnivorous();
     }
 }
