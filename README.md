@@ -1,18 +1,6 @@
 # PHPUnit: Testing with a Bite
 
-## https://symfonycasts.com/screencast/phpunit/mock-return#play
-
-Well hi there! This repository holds the code and script
-for the [PHPUnit: Testing with a Bite](https://knpuniversity.com/screencast/phpunit) course on KnpUniversity.
-
 ## Setup
-
-> **NOTE**: Because this is an older tutorial, the code only
-> works on PHP 7.3 and lower.
-
-If you've just downloaded the code, congratulations!
-
-To get it working, follow these steps:
 
 **Setup parameters.yml**
 
@@ -60,7 +48,6 @@ php bin/console server:run
 
 Now check out the site at `http://localhost:8000`
 
-Have fun!
 
 **(optional) Add bash alias for better DX**
 
@@ -72,15 +59,7 @@ alias phpunit=./vendor/bin/phpunit
 
 From now on you will be able to run local PHPUnit from your project directory by executing `phpunit` command. Add alias command to your bash profile if you don't want to run it every time you enter a new terminal.
 
-## Have Ideas, Feedback or an Issue?
 
-If you have suggestions or questions, please feel free to
-open an issue on this repository or comment on the course
-itself. We're watching both :).
+**To debug test**
 
-## Thanks!
-
-And as always, thanks so much for your support and letting
-us do what we love!
-
-<3 Your friends at KnpUniversity
+```phpunit --filter testItGrowsADinoFromASpec --debug```
